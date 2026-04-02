@@ -1,3 +1,23 @@
+<?php
+
+if(isset($_POST['submit']))
+    {
+        include_once('config.php');
+
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+        $sexo = $_POST['genero'];
+        $data_nasc = $_POST['data_nascimento'];
+        $cidade = $_POST['cidade'];
+        $estado = $_POST['estado'];
+        $endereço = $_POST['endereço'];
+
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereço) 
+        VALUES('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereço')");
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +95,7 @@
 </head>
 <body>
     <div class="box">
-        <form action="">
+        <form action="formulario.php" method="POST">
             <fieldset>
                 <legend><b>Cadastre-se</b></legend>
                 <br>
