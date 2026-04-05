@@ -5,6 +5,7 @@ if(isset($_POST['submit']))
         include_once('config.php');
 
         $nome = $_POST['nome'];
+        $senha = $_POST['senha'];
         $email = $_POST['email'];
         $telefone = $_POST['telefone'];
         $sexo = $_POST['genero'];
@@ -13,8 +14,8 @@ if(isset($_POST['submit']))
         $estado = $_POST['estado'];
         $endereço = $_POST['endereço'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereço) 
-        VALUES('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereço')");
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,senha,email,telefone,sexo,data_nasc,cidade,estado,endereço) 
+        VALUES('$nome','$senha','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereço')");
     }
 
 ?>
@@ -27,7 +28,7 @@ if(isset($_POST['submit']))
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(45deg, #FF69B4, white);
+            background-image: linear-gradient(45deg, lightblue, pink);
         }
         .box{
             position: absolute;
@@ -88,12 +89,28 @@ if(isset($_POST['submit']))
             border-radius: 8px;
         }
         #submit:hover{
-            background-color: #FF69B4;
+            background-color: palevioletred;
             cursor:pointer;
+        }
+         a{
+            color: white;
+            text-decoration: none;
+            border: 3px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            display: block;
+            margin-top: 1%;
+            margin-right: 95%;
+        }
+        a:hover{
+            cursor: pointer;
+            background-color: palevioletred;
         }
     </style>
 </head>
 <body>
+    <a href="home.php">Voltar</a>  
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
@@ -102,6 +119,11 @@ if(isset($_POST['submit']))
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput" >Nome Completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput" >Senha</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
