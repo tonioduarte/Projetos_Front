@@ -1,0 +1,138 @@
+:root {
+    --main-color: #E6B68B;
+    --white: #FFFFFF;
+    --bg: #ADD8E6;
+    --border: 0.1rem solid rgba(255,255,255,0.7);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    transition: 0.2s linear;
+}
+
+body {
+    background: url(./imgs/Fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    font-family: "Playwrite IE", cursive;
+    background-color: var(--bg);
+}
+
+section {
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px ;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: var(--white)
+}
+
+.navbar a:hover {
+    cursor: pointer;
+    color: var(--main-color);
+    border-bottom: var(--border);
+}
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+
+}
+
+.icons img:hover {
+    width: 55px;
+    height: 55px;
+
+}
+
+.btn {
+    background: var(--main-color);
+    color: var(--white);
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: var(--white);
+    font-size: 6rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content p {
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+.aboutimg img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 6rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.title span {
+    color: var(--main-color);
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    gap: 1.8rem;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 2rem;
+}
