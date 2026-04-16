@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(220, 219, 219) 0%, palevioletred 100%);
+}
