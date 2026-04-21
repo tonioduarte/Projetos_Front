@@ -229,7 +229,7 @@ h1 {
     }
 
     .logo {
-        left: 10px;
+        display: none;
     }
 
     .logo span {

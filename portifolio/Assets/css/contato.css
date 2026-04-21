@@ -183,7 +183,7 @@ body {
     border: none;
     outline: none;
     background: rgba(255,255,255,0.2);
-    color: var(--texto);
+    color: rgb(10, 7, 19);
 }
 
 
@@ -229,7 +229,7 @@ body {
     }
 
     .logo {
-        left: 10px;
+        display: none;
     }
 
     .logo span {
